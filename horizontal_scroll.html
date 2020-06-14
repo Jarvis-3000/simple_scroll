@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width:500px;
+            overflow-x:scroll;
+        }
+        ::-webkit-scrollbar{
+            height:0px;
+        }
+
+        .image_container{
+            width:2500px;
+            box-sizing: border-box;
+        }
+
+        img{
+            float:left;
+            box-sizing: border-box;
+        }
+
+        .button-container{
+            width:500px;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <div  class="image_container">
+                <img width="500px" src="https://archive.org/download/altometa_gmail_E/a.jpg" class="slide">
+                <img width="500px" src="https://archive.org/download/altometa_gmail_E/b.jpg" class="slide">
+                <img width="500px" src="https://archive.org/download/altometa_gmail_E/c.jpg" class="slide">
+                <img width="500px" src="https://archive.org/download/altometa_gmail_E/d.jpeg" class="slide">
+                <img width="500px" src="https://archive.org/download/altometa_gmail_E/e.jpg" class="slide">
+        </div>
+    </div>
+    <div class="button-container">
+        <hr>
+        <button onclick="Scroll(0)" class="slider-button">1</button>
+        <button onclick="Scroll(500)" class="slider-button">2</button>
+        <button onclick="Scroll(1500)" class="slider-button">4</button>
+        <button onclick="Scroll(2000)" class="slider-button">5</button>
+      </div>
+
+    <script>
+        function Scroll(Left) {
+            document.getElementsByClassName("container")[0].scroll({ top: 0,left: Left,behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
