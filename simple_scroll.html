@@ -1,0 +1,88 @@
+<html>
+<head>
+<style>
+
+button{
+  padding:10px 20px;
+  border:none;
+}
+
+#b1{
+  background-color:red;
+}
+
+#b2{
+  background-color:orange;
+}
+
+#b3{
+  background-color:blue;
+}
+
+#b4{
+  background-color:green;
+}
+
+#second{
+  border:1px solid;
+  height:400px;
+/*   padding:10px; */
+  overflow-x:hidden;
+  overflow-y:scroll;
+}
+.box
+{
+  
+  width:100%;
+  height:380px;
+  margin:5px 0px;
+}
+
+::-webkit-scrollbar{
+  width:0px;
+}
+
+#s1
+{
+  background-color:red;
+}
+#s2
+{
+  background-color:orange;
+}
+#s3
+{
+  background-color:blue;
+}
+#s4
+{
+  background-color:green;
+}
+</style>
+</head>
+<body>
+<div>
+  <button id="b1" onclick="scrollToTop(0)">1</button>
+  <button id="b2" onclick="scrollToTop(380)">2</button>
+  <button id="b3" onclick="scrollToTop(765)">3</button>
+  <button id="b4" onclick="scrollToTop(1160)">4</button>
+</div><br>
+<div id="second">
+  <div class="box" id="s1"></div>
+<div class="box" id="s2"></div>
+<div class="box" id="s3"></div>
+<div class="box" id="s4"></div>
+</div>
+
+<script>
+function scrollToTop(Top){
+  document.getElementById("second").scroll({
+    top:Top,
+    left:0,
+    behavior:"smooth"
+  });
+}
+
+</script>
+</body>
+</html>
